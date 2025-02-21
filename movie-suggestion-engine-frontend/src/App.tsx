@@ -1,37 +1,29 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Suggestions from './components/Suggestions';
-import UrlInput from './components/UrlInput';
+import Suggestions, { Movie } from './components/Suggestions';
+import UserInput from './components/UserInput';
+import mockSuggestions from './mocksuggestions.json';
+
 
 function App() {
-  const [letterboxdUrl, setLetterboxdUrl] = useState('');
-  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [letterboxdUser, setLetterboxdUser] = useState('');
+  const [suggestions, setSuggestions] = useState<Movie[]>([]);
   const [error, setError] = useState('');
 
   const fetchSuggestions = async () => {
     setError('');
     setSuggestions([]);
 
-    const urlPattern = /^https:\/\/letterboxd\.com\/\w+\/films\/$/;
-    if (!urlPattern.test(letterboxdUrl)) {
-      setError('Please enter a valid Letterboxd URL in the format: https://letterboxd.com/user/films/');
+    if (!letterboxdUser) {
+      setError('Please enter a Letterboxd Username');
       return;
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/get-suggestions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: letterboxdUrl }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch suggestions');
-      }
-
-      const data = await response.json();
-      setSuggestions(data.suggestions || []);
+      const data: Movie[] = mockSuggestions;
+      
+      setSuggestions(data || []);
     } catch (err) {
       setError('An error occurred while fetching suggestions. Please try again.');
     }
@@ -40,9 +32,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <UrlInput
-        letterboxdUrl={letterboxdUrl}
-        setLetterboxdUrl={setLetterboxdUrl}
+      <UserInput
+        letterboxdUser={letterboxdUser}
+        setLetterboxdUser={setLetterboxdUser}
         fetchSuggestions={fetchSuggestions}
         error={error}
       />

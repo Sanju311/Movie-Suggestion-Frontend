@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-query": "^1.2.8",
     "ajv": "^7.2.4"
   }
 }
