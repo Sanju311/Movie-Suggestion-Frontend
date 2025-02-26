@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import usePosterImages from '../hooks/getPosterImages';
 
 export interface Movie {
   title: string;
   id: number;
-  release_date: string;
   vote_average: number;
+  predicted_rating: number;
+  Release_year: string;
 }
 
 interface SuggestionsProps {
@@ -13,6 +15,7 @@ interface SuggestionsProps {
 
 const Suggestions: React.FC<SuggestionsProps> = ({ suggestions }) => {
   const [visibleCount, setVisibleCount] = useState(20);
+  const { data: posters, isLoading, error } = usePosterImages(suggestions); // Fetch movies only when shouldFetch is true
 
   const showMore = () => {
     setVisibleCount((prevCount) => prevCount + 20);
@@ -27,7 +30,11 @@ const Suggestions: React.FC<SuggestionsProps> = ({ suggestions }) => {
             <div className="suggestions-grid">
               {suggestions.slice(0, visibleCount).map((movie) => (
                 <div key={movie.id} className="suggestion-item">
-                  <strong>{movie.title}</strong> ({new Date(movie.release_date).getFullYear()}) - Rating: {movie.vote_average}
+                  {posters && posters[movie.id] && (
+                    <img className='suggestion-item-img' src={posters[movie.id]} alt={movie.title} />
+                  )}
+                  <strong>{movie.title}</strong> ({new Date(movie.Release_year).getFullYear()})
+                  <div>Rating: {movie.predicted_rating}</div>                
                 </div>
               ))}
             </div>

@@ -17,15 +17,13 @@ const UserInput: React.FC<UserInput> = ({
     <div className="user-input-container">
       <input
         type="text"
-        placeholder="Please enter your Letterboxd Username"
+        className="user-input"
+        placeholder="Enter Letterboxd Username"
         value={letterboxdUser}
         onChange={(e) => setLetterboxdUser(e.target.value)}
-        className="user-input"
       />
-      <button onClick={fetchSuggestions} className="fetch-button">
-        Get Suggestions
-      </button>
-      {error && <p className="error-message">{error}</p>}
+      <button className="fetch-button" onClick={fetchSuggestions}>Get Suggestions</button>
+      {error && <div className="error-message">{error}</div>}
     </div>
   );
 };

@@ -98,7 +98,14 @@ body, html {
   background-color: #555;
   padding: 10px;
   border-radius: 5px;
-  text-align: left;
+  text-align: center;
+}
+
+.suggestion-item-img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 .show-more-suggestions-btn {

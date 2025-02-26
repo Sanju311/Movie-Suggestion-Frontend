@@ -1,32 +1,23 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Suggestions, { Movie } from './components/Suggestions';
+import Suggestions from './components/Suggestions';
 import UserInput from './components/UserInput';
-import mockSuggestions from './mocksuggestions.json';
+import useSuggestions from './hooks/getSuggestions'; // Import the custom hook
 
 
 function App() {
   const [letterboxdUser, setLetterboxdUser] = useState('');
-  const [suggestions, setSuggestions] = useState<Movie[]>([]);
-  const [error, setError] = useState('');
+  const [shouldFetch, setShouldFetch] = useState(false); // Controls when to fetch
 
-  const fetchSuggestions = async () => {
-    setError('');
-    setSuggestions([]);
+  const { data: suggestions, isLoading, error } = useSuggestions(letterboxdUser, shouldFetch); // Fetch movies only when shouldFetch is true
 
+  const fetchSuggestions = () => {
     if (!letterboxdUser) {
-      setError('Please enter a Letterboxd Username');
+      setShouldFetch(false); // Prevents query execution
       return;
     }
-
-    try {
-      const data: Movie[] = mockSuggestions;
-      
-      setSuggestions(data || []);
-    } catch (err) {
-      setError('An error occurred while fetching suggestions. Please try again.');
-    }
+    setShouldFetch(true); // Triggers fetching
   };
 
   return (
@@ -36,9 +27,10 @@ function App() {
         letterboxdUser={letterboxdUser}
         setLetterboxdUser={setLetterboxdUser}
         fetchSuggestions={fetchSuggestions}
-        error={error}
+        error={!letterboxdUser ? '' : error instanceof Error ? error.message : ''}
       />
-      <Suggestions suggestions={suggestions} />
+      {isLoading && <p>Loading suggestions...</p>}
+      <Suggestions suggestions={suggestions || []} />
     </div>
   );
 }
