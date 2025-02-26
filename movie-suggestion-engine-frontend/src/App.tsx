@@ -29,7 +29,7 @@ function App() {
         fetchSuggestions={fetchSuggestions}
         error={!letterboxdUser ? '' : error instanceof Error ? error.message : ''}
       />
-      {isLoading && <p>Loading suggestions...</p>}
+      {isLoading && <p className='loading-wheel'></p>}
       <Suggestions suggestions={suggestions || []} />
     </div>
   );

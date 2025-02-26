@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import usePosterImages from '../hooks/getPosterImages';
 
 export interface Movie {
-  title: string;
+  Release_year: number;
+  genres: string[];
   id: number;
-  vote_average: number;
   predicted_rating: number;
-  Release_year: string;
+  title: string;
+  vote_average: number;
 }
 
 interface SuggestionsProps {
@@ -21,6 +22,10 @@ const Suggestions: React.FC<SuggestionsProps> = ({ suggestions }) => {
     setVisibleCount((prevCount) => prevCount + 20);
   };
 
+  // const lowerCaseTitle = (title: string) => {
+  //   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  // };
+
   return (
     <main className='suggestions'>
       <h2 className="suggestions-header">Suggestions</h2>
@@ -31,10 +36,16 @@ const Suggestions: React.FC<SuggestionsProps> = ({ suggestions }) => {
               {suggestions.slice(0, visibleCount).map((movie) => (
                 <div key={movie.id} className="suggestion-item">
                   {posters && posters[movie.id] && (
+                    <a
+                    href={`https://www.themoviedb.org/movie/${movie.id}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img className='suggestion-item-img' src={posters[movie.id]} alt={movie.title} />
-                  )}
-                  <strong>{movie.title}</strong> ({new Date(movie.Release_year).getFullYear()})
-                  <div>Rating: {movie.predicted_rating}</div>                
+                  </a>                  )}
+                  <strong>{movie.title}</strong> ({movie.Release_year})
+                  <div>Public Rating: {movie.vote_average.toFixed(1)}</div>
+                  <div>Your Predicted Rating: {movie.predicted_rating.toFixed(1)}</div>
                 </div>
               ))}
             </div>

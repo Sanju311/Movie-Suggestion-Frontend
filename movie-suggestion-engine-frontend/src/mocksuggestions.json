@@ -1,596 +1,82 @@
 [
   {
-    "title": "The Shawshank Redemption",
-    "id": 278,
-    "release_date": "1994-09-23",
-    "vote_average": 8.708
-  },
-  {
-    "title": "The Godfather",
-    "id": 238,
-    "release_date": "1972-03-14",
-    "vote_average": 8.69
-  },
-  {
-    "title": "The Godfather Part II",
-    "id": 240,
-    "release_date": "1974-12-20",
-    "vote_average": 8.571
-  },
-  {
-    "title": "Schindler's List",
-    "id": 424,
-    "release_date": "1993-12-15",
-    "vote_average": 8.567
-  },
-  {
-    "title": "12 Angry Men",
-    "id": 389,
-    "release_date": "1957-04-10",
-    "vote_average": 8.5
-  },
-  {
-    "title": "Spirited Away",
-    "id": 129,
-    "release_date": "2001-07-20",
-    "vote_average": 8.538
-  },
-  {
-    "title": "Dilwale Dulhania Le Jayenge",
-    "id": 19404,
-    "release_date": "1995-10-20",
-    "vote_average": 8.5
-  },
-  {
-    "title": "The Dark Knight",
-    "id": 155,
-    "release_date": "2008-07-16",
-    "vote_average": 8.518
-  },
-  {
-    "title": "The Green Mile",
-    "id": 497,
-    "release_date": "1999-12-10",
-    "vote_average": 8.507
-  },
-  {
-    "title": "Parasite",
-    "id": 496243,
-    "release_date": "2019-05-30",
-    "vote_average": 8.504
-  },
-  {
-    "title": "Pulp Fiction",
-    "id": 680,
-    "release_date": "1994-09-10",
-    "vote_average": 8.488
-  },
-  {
-    "title": "Your Name.",
-    "id": 372058,
-    "release_date": "2016-08-26",
-    "vote_average": 8.5
-  },
-  {
-    "title": "The Lord of the Rings: The Return of the King",
-    "id": 122,
-    "release_date": "2003-12-17",
-    "vote_average": 8.483
-  },
-  {
-    "title": "Forrest Gump",
-    "id": 13,
-    "release_date": "1994-06-23",
-    "vote_average": 8.469
-  },
-  {
-    "title": "The Good, the Bad and the Ugly",
-    "id": 429,
-    "release_date": "1966-12-22",
-    "vote_average": 8.5
-  },
-  {
-    "title": "Seven Samurai",
-    "id": 346,
-    "release_date": "1954-04-26",
-    "vote_average": 8.462
-  },
-  {
-    "title": "GoodFellas",
-    "id": 769,
-    "release_date": "1990-09-12",
-    "vote_average": 8.457
-  },
-  {
-    "title": "Grave of the Fireflies",
-    "id": 12477,
-    "release_date": "1988-04-16",
-    "vote_average": 8.456
-  },
-  {
-    "title": "Cinema Paradiso",
-    "id": 11216,
-    "release_date": "1988-11-17",
-    "vote_average": 8.449
-  },
-  {
-    "title": "Life Is Beautiful",
-    "id": 637,
-    "release_date": "1997-12-20",
-    "vote_average": 8.449
-  },
-  {
-    "title": "Interstellar",
-    "id": 157336,
-    "release_date": "2014-11-05",
-    "vote_average": 8.446
-  },
-  {
-    "title": "Flow",
-    "id": 823219,
-    "release_date": "2024-08-29",
-    "vote_average": 8.449
-  },
-  {
-    "title": "Fight Club",
-    "id": 550,
-    "release_date": "1999-10-15",
-    "vote_average": 8.438
-  },
-  {
-    "title": "Impossible Things",
-    "id": 667257,
-    "release_date": "2021-06-17",
-    "vote_average": 8.4
-  },
-  {
-    "title": "Psycho",
-    "id": 539,
-    "release_date": "1960-06-22",
-    "vote_average": 8.427
-  },
-  {
-    "title": "A Dog's Will",
-    "id": 40096,
-    "release_date": "2000-09-15",
-    "vote_average": 8.4
-  },
-  {
-    "title": "City of God",
-    "id": 598,
-    "release_date": "2002-08-30",
-    "vote_average": 8.425
-  },
-  {
-    "title": "Once Upon a Time in America",
-    "id": 311,
-    "release_date": "1984-05-23",
-    "vote_average": 8.42
-  },
-  {
-    "title": "The Lord of the Rings: The Fellowship of the Ring",
-    "id": 120,
-    "release_date": "2001-12-18",
-    "vote_average": 8.4
-  },
-  {
-    "title": "One Flew Over the Cuckoo's Nest",
-    "id": 510,
-    "release_date": "1975-11-19",
-    "vote_average": 8.414
-  },
-  {
-    "title": "Gabriel's Inferno",
-    "id": 696374,
-    "release_date": "2020-05-29",
-    "vote_average": 8.4
-  },
-  {
-    "title": "Harakiri",
-    "id": 14537,
-    "release_date": "1962-09-15",
-    "vote_average": 8.408
-  },
-  {
-    "title": "Howl's Moving Castle",
-    "id": 4935,
-    "release_date": "2004-09-09",
-    "vote_average": 8.402
-  },
-  {
-    "title": "Spider-Man: Into the Spider-Verse",
-    "id": 324857,
-    "release_date": "2018-12-06",
-    "vote_average": 8.399
-  },
-  {
-    "title": "The Lord of the Rings: The Two Towers",
-    "id": 121,
-    "release_date": "2002-12-18",
-    "vote_average": 8.399
-  },
-  {
-    "title": "Primal: Tales of Savagery",
-    "id": 704264,
-    "release_date": "2019-11-21",
-    "vote_average": 8.398
-  },
-  {
-    "title": "The Empire Strikes Back",
-    "id": 1891,
-    "release_date": "1980-05-20",
-    "vote_average": 8.4
-  },
-  {
-    "title": "Gabriel's Inferno: Part II",
-    "id": 724089,
-    "release_date": "2020-07-31",
-    "vote_average": 8.387
-  },
-  {
-    "title": "Hope",
-    "id": 255709,
-    "release_date": "2013-10-02",
-    "vote_average": 8.383
-  },
-  {
-    "title": "Gabriel's Inferno: Part III",
-    "id": 761053,
-    "release_date": "2020-11-19",
-    "vote_average": 8.4
-  },
-  {
-    "title": "A Silent Voice: The Movie",
-    "id": 378064,
-    "release_date": "2016-09-17",
-    "vote_average": 8.382
-  },
-  {
-    "title": "Dou kyu sei – Classmates",
-    "id": 372754,
-    "release_date": "2016-02-20",
-    "vote_average": 8.4
-  },
-  {
-    "title": "Whiplash",
-    "id": 244786,
-    "release_date": "2014-10-10",
-    "vote_average": 8.379
-  },
-  {
-    "title": "The Pianist",
-    "id": 423,
-    "release_date": "2002-09-17",
-    "vote_average": 8.379
-  },
-  {
-    "title": "The Wild Robot",
-    "id": 1184918,
-    "release_date": "2024-09-12",
-    "vote_average": 8.4
-  },
-  {
-    "title": "Se7en",
-    "id": 807,
-    "release_date": "1995-09-22",
-    "vote_average": 8.4
-  },
-  {
-    "title": "Radical",
-    "id": 1058694,
-    "release_date": "2023-10-19",
-    "vote_average": 8.4
-  },
-  {
-    "title": "The Legend of Hei",
-    "id": 620249,
-    "release_date": "2019-08-27",
-    "vote_average": 8.4
-  },
-  {
-    "title": "Inception",
-    "id": 27205,
-    "release_date": "2010-07-15",
-    "vote_average": 8.37
-  },
-  {
-    "title": "Spider-Man: Across the Spider-Verse",
-    "id": 569094,
-    "release_date": "2023-05-31",
-    "vote_average": 8.354
-  },
-  {
-    "title": "Rear Window",
-    "id": 567,
-    "release_date": "1954-08-01",
-    "vote_average": 8.35
-  },
-  {
-    "title": "The Silence of the Lambs",
-    "id": 274,
-    "release_date": "1991-02-14",
-    "vote_average": 8.347
-  },
-  {
-    "title": "The Quintessential Quintuplets Movie",
-    "id": 820067,
-    "release_date": "2022-05-20",
-    "vote_average": 8.343
-  },
-  {
-    "title": "American History X",
-    "id": 73,
-    "release_date": "1998-07-01",
-    "vote_average": 8.341
-  },
-  {
-    "title": "Princess Mononoke",
-    "id": 128,
-    "release_date": "1997-07-12",
-    "vote_average": 8.334
-  },
-  {
-    "title": "High and Low",
-    "id": 12493,
-    "release_date": "1963-03-01",
-    "vote_average": 8.3
-  },
-  {
-    "title": "A Brighter Summer Day",
-    "id": 15804,
-    "release_date": "1991-07-27",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Once Upon a Studio",
-    "id": 1139087,
-    "release_date": "2023-09-24",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Back to the Future",
-    "id": 105,
-    "release_date": "1985-07-03",
-    "vote_average": 8.318
-  },
-  {
-    "title": "Dedicated to my ex",
-    "id": 644479,
-    "release_date": "2019-11-01",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Perfect Blue",
-    "id": 10494,
-    "release_date": "1998-02-28",
-    "vote_average": 8.308
-  },
-  {
-    "title": "Dead Poets Society",
-    "id": 207,
-    "release_date": "1989-06-02",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Ikiru",
-    "id": 3782,
-    "release_date": "1952-10-09",
-    "vote_average": 8.306
-  },
-  {
-    "title": "The Great Dictator",
-    "id": 914,
-    "release_date": "1940-10-15",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Léon: The Professional",
-    "id": 101,
-    "release_date": "1994-09-14",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Sunset Boulevard",
-    "id": 599,
-    "release_date": "1950-08-10",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Hotarubi no Mori e",
-    "id": 92321,
-    "release_date": "2011-09-17",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Neon Genesis Evangelion: The End of Evangelion",
-    "id": 18491,
-    "release_date": "1997-07-19",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Once Upon a Time in the West",
-    "id": 335,
-    "release_date": "1968-12-21",
-    "vote_average": 8.288
-  },
-  {
-    "title": "Modern Times",
-    "id": 3082,
-    "release_date": "1936-02-05",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Taylor Swift: Reputation Stadium Tour",
-    "id": 568332,
-    "release_date": "2018-12-31",
-    "vote_average": 8.281
-  },
-  {
-    "title": "Josee, the Tiger and the Fish",
-    "id": 652837,
-    "release_date": "2020-12-25",
-    "vote_average": 8.3
-  },
-  {
-    "title": "The Intouchables",
-    "id": 77338,
-    "release_date": "2011-11-02",
-    "vote_average": 8.275
-  },
-  {
-    "title": "We All Loved Each Other So Much",
-    "id": 42269,
-    "release_date": "1974-12-21",
-    "vote_average": 8.275
-  },
-  {
-    "title": "Apocalypse Now",
-    "id": 28,
-    "release_date": "1979-05-19",
-    "vote_average": 8.276
-  },
-  {
-    "title": "It's a Wonderful Life",
-    "id": 1585,
-    "release_date": "1946-12-20",
-    "vote_average": 8.272
-  },
-  {
-    "title": "City Lights",
-    "id": 901,
-    "release_date": "1931-02-06",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Given",
-    "id": 632632,
-    "release_date": "2020-08-22",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Paths of Glory",
-    "id": 975,
-    "release_date": "1957-10-25",
-    "vote_average": 8.264
-  },
-  {
-    "title": "Miracle in Cell No. 7",
-    "id": 637920,
-    "release_date": "2019-10-10",
-    "vote_average": 8.3
-  },
-  {
-    "title": "The Legend of 1900",
-    "id": 10376,
-    "release_date": "1998-10-28",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Le Trou",
-    "id": 29259,
-    "release_date": "1960-03-18",
-    "vote_average": 8.3
-  },
-  {
-    "title": "The Lion King",
-    "id": 8587,
-    "release_date": "1994-06-24",
-    "vote_average": 8.257
-  },
-  {
-    "title": "Oldboy",
-    "id": 670,
-    "release_date": "2003-11-21",
-    "vote_average": 8.3
-  },
-  {
-    "title": "Come and See",
-    "id": 25237,
-    "release_date": "1985-10-17",
-    "vote_average": 8.255
-  },
-  {
-    "title": "Clouds",
-    "id": 630566,
-    "release_date": "2020-10-09",
-    "vote_average": 8.252
-  },
-  {
-    "title": "TAYLOR SWIFT | THE ERAS TOUR",
-    "id": 1160164,
-    "release_date": "2023-10-13",
-    "vote_average": 8.256
-  },
-  {
-    "title": "Life in a Year",
-    "id": 447362,
-    "release_date": "2020-11-27",
-    "vote_average": 8.25
-  },
-  {
-    "title": "Violet Evergarden: The Movie",
-    "id": 533514,
-    "release_date": "2020-09-18",
-    "vote_average": 8.246
-  },
-  {
-    "title": "Five Feet Apart",
-    "id": 527641,
-    "release_date": "2019-03-14",
-    "vote_average": 8.246
-  },
-  {
-    "title": "The Boy, the Mole, the Fox and the Horse",
-    "id": 995133,
-    "release_date": "2022-12-25",
-    "vote_average": 8.245
-  },
-  {
-    "title": "Avengers: Endgame",
-    "id": 299534,
-    "release_date": "2019-04-24",
-    "vote_average": 8.245
-  },
-  {
-    "title": "Rascal Does Not Dream of a Dreaming Girl",
-    "id": 572154,
-    "release_date": "2019-06-15",
-    "vote_average": 8.243
-  },
-  {
-    "title": "Klaus",
-    "id": 508965,
-    "release_date": "2019-11-08",
-    "vote_average": 8.243
-  },
-  {
-    "title": "Evangelion: 3.0+1.0 Thrice Upon a Time",
-    "id": 283566,
-    "release_date": "2021-03-08",
-    "vote_average": 8.2
-  },
-  {
-    "title": "Green Book",
-    "id": 490132,
-    "release_date": "2018-11-16",
-    "vote_average": 8.241
-  },
-  {
-    "title": "Avengers: Infinity War",
-    "id": 299536,
-    "release_date": "2018-04-25",
-    "vote_average": 8.241
-  },
-  {
-    "title": "Out of the Clear Blue Sky",
-    "id": 654299,
-    "release_date": "2019-12-24",
-    "vote_average": 8.239
-  },
-  {
-    "title": "Mommy",
-    "id": 265177,
-    "release_date": "2014-09-19",
-    "vote_average": 8.236
-  }
+  "title": "The Shawshank Redemption",
+  "id": 278,
+  "Release_year": 1994,
+  "vote_average": 8.708,
+  "predicted_rating": 8,
+  "genres": ["Drama"]
+},
+{
+  "title": "The Godfather",
+  "id": 238,
+  "Release_year": 1972,
+  "vote_average": 8.69,
+  "predicted_rating": 8,
+  "genres": ["Crime", "Drama"]
+},
+{
+  "title": "The Godfather Part II",
+  "id": 240,
+  "Release_year": 1974,
+  "vote_average": 8.571,
+  "predicted_rating": 8,
+  "genres": ["Crime", "Drama"]
+},
+{
+  "title": "Schindler's List",
+  "id": 424,
+  "Release_year": 1993,
+  "vote_average": 8.567,
+  "predicted_rating": 8,
+  "genres": ["Biography", "Drama", "History"]
+},
+{
+  "title": "12 Angry Men",
+  "id": 389,
+  "Release_year": 1957,
+  "vote_average": 8.5,
+  "predicted_rating": 8,
+  "genres": ["Crime", "Drama"]
+},
+{
+  "title": "Spirited Away",
+  "id": 129,
+  "Release_year": 2001,
+  "vote_average": 8.538,
+  "predicted_rating": 8,
+  "genres": ["Animation", "Adventure", "Family"]
+},
+{
+  "title": "Dilwale Dulhania Le Jayenge",
+  "id": 19404,
+  "Release_year": 1995,
+  "vote_average": 8.5,
+  "predicted_rating": 8,
+  "genres": ["Comedy", "Drama", "Romance"]
+},
+{
+  "title": "The Dark Knight",
+  "id": 155,
+  "Release_year": 2008,
+  "vote_average": 8.518,
+  "predicted_rating": 8,
+  "genres": ["Action", "Crime", "Drama"]
+},
+{
+  "title": "The Green Mile",
+  "id": 497,
+  "Release_year": 1999,
+  "vote_average": 8.507,
+  "predicted_rating": 8,
+  "genres": ["Crime", "Drama", "Fantasy"]
+},
+{
+  "title": "Parasite",
+  "id": 496243,
+  "Release_year": 2019,
+  "vote_average": 8.504,
+  "predicted_rating": 8,
+  "genres": ["Comedy", "Drama", "Thriller"]
+}
 ]
