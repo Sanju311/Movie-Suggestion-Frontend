@@ -1,28 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import './App.css';
 import Header from './components/Header';
 import Suggestions from './components/Suggestions';
 import UserInput from './components/UserInput';
-import useSuggestions from './hooks/getSuggestions'; // Import the custom hook
-
+import useSuggestions from './hooks/getSuggestions';
+import Carousel from './components/carousel'; 
 
 function App() {
   const [letterboxdUser, setLetterboxdUser] = useState('');
-  const [shouldFetch, setShouldFetch] = useState(false); // Controls when to fetch
-
-  const { data: suggestions, isLoading, error } = useSuggestions(letterboxdUser, shouldFetch); // Fetch movies only when shouldFetch is true
+  const { data: suggestions, isLoading, error, refetch } = useSuggestions(letterboxdUser);
 
   const fetchSuggestions = () => {
-    if (!letterboxdUser) {
-      setShouldFetch(false); // Prevents query execution
-      return;
-    }
-    setShouldFetch(true); // Triggers fetching
+    if (!letterboxdUser) return;
+    refetch();
   };
+
 
   return (
     <div className="App">
       <Header />
+      <Carousel
+        options={{loop: true}}
+      />
       <UserInput
         letterboxdUser={letterboxdUser}
         setLetterboxdUser={setLetterboxdUser}

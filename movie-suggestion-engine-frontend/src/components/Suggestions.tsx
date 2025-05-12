@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import usePosterImages from '../hooks/getPosterImages';
 
 export interface Movie {
@@ -15,12 +15,20 @@ interface SuggestionsProps {
 }
 
 const Suggestions: React.FC<SuggestionsProps> = ({ suggestions }) => {
-  const [visibleCount, setVisibleCount] = useState(20);
-  const { data: posters, isLoading, error } = usePosterImages(suggestions); // Fetch movies only when shouldFetch is true
+  const [page, setPage] = useState(1);
+  const pageSize = 20;
+  const [allPosters, setAllPosters] = useState<{ [key: number]: string }>({});
 
-  const showMore = () => {
-    setVisibleCount((prevCount) => prevCount + 20);
-  };
+  const visibleMovies = suggestions.slice(0, page * pageSize);
+  const { data: posters } = usePosterImages(visibleMovies);
+
+  useEffect(() => {
+    if (posters) {
+      setAllPosters((prev) => ({ ...prev, ...posters }));
+    }
+  }, [posters]);
+
+  const showMore = () => setPage(prev => prev + 1);
 
   // const lowerCaseTitle = (title: string) => {
   //   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -33,23 +41,24 @@ const Suggestions: React.FC<SuggestionsProps> = ({ suggestions }) => {
         {suggestions.length > 0 ? (
           <>
             <div className="suggestions-grid">
-              {suggestions.slice(0, visibleCount).map((movie) => (
+              {visibleMovies.map((movie) => (
                 <div key={movie.id} className="suggestion-item">
-                  {posters && posters[movie.id] && (
+                  {allPosters && allPosters[movie.id] && (
                     <a
-                    href={`https://www.themoviedb.org/movie/${movie.id}/`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img className='suggestion-item-img' src={posters[movie.id]} alt={movie.title} />
-                  </a>                  )}
+                      href={`https://www.themoviedb.org/movie/${movie.id}/`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img className='suggestion-item-img' src={allPosters[movie.id]} alt={movie.title} />
+                    </a>
+                  )}
                   <strong>{movie.title}</strong> ({movie.Release_year})
                   <div>Public Rating: {movie.vote_average.toFixed(1)}</div>
                   <div>Your Predicted Rating: {movie.predicted_rating.toFixed(1)}</div>
                 </div>
               ))}
             </div>
-            {visibleCount < suggestions.length && (
+            {visibleMovies.length < suggestions.length && (
               <button className='show-more-suggestions-btn' onClick={showMore}>Show More</button>
             )}
           </>
