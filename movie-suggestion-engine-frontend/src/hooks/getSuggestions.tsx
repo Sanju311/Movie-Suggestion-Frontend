@@ -3,8 +3,12 @@ import { Movie } from '../components/Suggestions';
 
 const fetchMovieSuggestions = async (username: string): Promise<Movie[]> => {
   const response = await fetch(`http://127.0.0.1:5050/GetMovieRecommendations/${username}`);
-  if (!response.ok) throw new Error('Failed to load suggestions');
-  return response.json();
+
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error('Invalid Username or No Films Reviewed');
+  }
+  return data;
 };
 
 const useSuggestions = (username: string) => {
