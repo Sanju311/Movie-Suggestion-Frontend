@@ -1,8 +1,10 @@
 import { useQuery } from 'react-query';
 import { Movie } from '../components/Suggestions';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const fetchMovieSuggestions = async (username: string): Promise<Movie[]> => {
-  const response = await fetch(`http://127.0.0.1:5050/GetMovieRecommendations/${username}`);
+  const response = await fetch(`${API_URL}/GetMovieRecommendations/${username}`);
 
   const data = await response.json();
   if (!response.ok) {

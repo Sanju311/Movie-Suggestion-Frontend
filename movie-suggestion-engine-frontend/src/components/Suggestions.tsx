@@ -38,10 +38,6 @@ const Suggestions: React.FC<SuggestionsProps> = ({ suggestions, suggestionVisibi
   } 
 
 
-  // const lowerCaseTitle = (title: string) => {
-  //   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  // };
-
   //return visible only if suggestions have been fetched
   return suggestionVisibility
     ? (

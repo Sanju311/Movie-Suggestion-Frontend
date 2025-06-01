@@ -1,10 +1,8 @@
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import { Movie } from '../components/Suggestions';
-import { TMDB_API_KEY } from '../config'; // Import the TMDB API key
 
-
-// const TMDB_API_KEY = 'YOUR_TMDB_API_KEY'; // Replace with your TMDB API key
+const TMDB_API_KEY = process.env.REACT_APP_TMDB_API_KEY; // Replace with your TMDB API key
 
 const fetchPosterImages = async (movies: Movie[]) => {
   const posters: { [key: number]: string } = {};
