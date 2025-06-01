@@ -9,7 +9,7 @@ import Carousel from './components/carousel';
 
 function App() {
   const [letterboxdUser, setLetterboxdUser] = useState('');
-  const { data: suggestions, isLoading, error, refetch } = useSuggestions(letterboxdUser);
+  const { data: suggestions, isLoading, isFetching, error, refetch } = useSuggestions(letterboxdUser);
   const [showSuggestions, setShowSuggestions] = useState(false)
   const [errorMessage, setErrorMessage] = useState('');
   const suggestionsRef = useRef<HTMLDivElement | null>(null); 
@@ -47,7 +47,7 @@ function App() {
         fetchSuggestions={fetchSuggestions}
         error={errorMessage}
       />
-      {isLoading && <p className='loading-wheel'></p>}
+      {isFetching && <p className='loading-wheel'></p>}
       <div>
         
       </div>

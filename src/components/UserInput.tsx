@@ -18,7 +18,7 @@ const UserInput: React.FC<UserInput> = ({
       <input
         type="text"
         className="user-input"
-        placeholder="Enter Letterboxd User ex: Sanju311"
+        placeholder="Enter username ex:shreysinha"
         value={letterboxdUser}
         onChange={(e) => setLetterboxdUser(e.target.value)}
       />
