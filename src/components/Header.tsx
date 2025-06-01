@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderNav from '../components/HeaderNav'; 
+import HeaderNav from './HeaderNav'; 
 
 const Header: React.FC = () => {
   return (
